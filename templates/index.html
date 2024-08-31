@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Review App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Reviews</h1>
+        <div id="review-list"></div>
+        <input type="text" id="review-input" placeholder="Enter your review...">
+        <button id="submit-review">Submit</button>
+    </div>
+
+    <!-- Modal for editing reviews -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Review</h2>
+            <input type="text" id="edit-input">
+            <button id="save-edit">Save</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
